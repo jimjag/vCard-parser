@@ -1,0 +1,11 @@
+{
+	"name": "jimjag/vcard-parser",
+	"license": ["MIT"],
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"autoload": {
+		"classmap": ["."]
+	},
+	"minimum-stability": "dev"
+}

@@ -1,6 +1,6 @@
-Nuovo/Nouveau vCard-parser is a simple vCard file parser with the focus on ease of use.
+vCard-parser
 
-The parser was written mostly because I couldn't find one that I was satisfied with - all those that I tried either failed with real world data or were too unwieldy or inconvenient, hence this parser.
+Based on the abandoned Nuovo/Nouveau vCard-parser; a simple vCard file parser with the focus on ease of use.
 
 The parser can read both single and multiple vCards from a single file and with the help of PHP's magic methods and interfaces it can be written concisely. For example:
 
@@ -19,6 +19,8 @@ In the single-vCard mode every element is accessible directly.
         print_r($vCard -> tel);
     }
 
+In order to support generic keys, like X-*, use the method setAttr instead.
+
 In the multiple-vCard mode the object can be used as an array to retrieve separate vCard objects for each vCard in the file.
 
     else
@@ -35,14 +37,9 @@ It is possible to specify an option to the vCard constructor that will let you a
 
     $vCard = new vCard('Example3.0.vcf', false, array('Collapse' => true));
 
-More on usage in [the wiki](https://github.com/nuovo/vCard-parser/wiki)
+More on usage in [the original wiki](https://github.com/nuovo/vCard-parser/wiki)
 
 See also:
 * http://tools.ietf.org/html/rfc2425 - A MIME Content-Type for Directory Information
 * http://tools.ietf.org/html/rfc2426 - vCard MIME directory profile
 * http://tools.ietf.org/html/rfc4770 - vCard Extensions for Instant Messaging (IM)
-
-TODOs planned:
-* Add support for non-standard ("X-...") elements;
-
-http://www.nuovo.lv
